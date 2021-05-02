@@ -17,7 +17,7 @@ from textblob import Word
 from textblob import TextBlob
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer as si
 import nltk
-#nltk.download('stopwords')
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 import re
 from textblob import TextBlob, Word
