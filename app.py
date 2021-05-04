@@ -337,7 +337,9 @@ st.subheader("Created by: Mithesh R, Vidhi K, Kartikay L")
 
 st.write("Don't have a Ticker, You can find it [here](https://in.finance.yahoo.com)")
 
-input1 = st.text_input("Enter Your Market, Keyword and Ticker (Not needed for NASDAQ/NYSE)", "Type Here ...")
+st.write("Input example: Indian,sensex,^BSESN (make sure ticker is only from Yahoo Finance) or NASDAQ,apple (No Ticker Needed)")
+
+input1 = st.text_input("Enter Your Market, Keyword and Ticker (Not needed for NASDAQ/NYSE)", "Type Here ... Ignore the input error...")
 list1 = input1.split(',')
 load_state = st.text('Get quick reports in no time!')
 if list1[0] == 'Indian':
