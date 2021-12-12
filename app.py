@@ -53,7 +53,7 @@ def article_report_nasdaq(keyword):
                                       to=str(tod)[:10],
                                       language='en',
                                       sort_by='relevancy')
-    articles = all_articles['articles']
+    articles = top_headlines['articles']
     df = pd.DataFrame(articles)
     z = df
     z.publishedAt = pd.to_datetime(z.publishedAt)
@@ -200,7 +200,7 @@ def article_report_india(keyword, ticker):
                                       to=str(tod)[:10],
                                       language='en',
                                       sort_by='relevancy')
-    articles = all_articles['articles']
+    articles = top_headlines['articles']
     df = pd.DataFrame(articles)
     z = df
     z.publishedAt = pd.to_datetime(z.publishedAt)
