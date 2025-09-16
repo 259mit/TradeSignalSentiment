@@ -131,15 +131,14 @@ st.write("Input example: `Indian,sensex,^BSESN` or `NASDAQ,apple` (no ticker nee
 input1 = st.text_input("Enter Market, Keyword and Ticker", "Indian,sensex,^BSESN")
 list1 = [x.strip() for x in input1.split(",")]
 
-load_state = st.text("Preparing your report...")
-
-try:
-    market = list1[0]
-    keyword = list1[1]
-    ticker = list1[2] if len(list1) > 2 else None
-except Exception:
-    st.error("Invalid input format. Please use `Market,Keyword,Ticker`.")
+# validate
+if len(list1) < 2:
+    st.error("Please provide input in format: Market,Keyword[,Ticker]")
     st.stop()
+
+market = list1[0]
+keyword = list1[1]
+ticker = list1[2] if len(list1) > 2 else None
 
 # -----------------------------
 # Fetch and analyze news
